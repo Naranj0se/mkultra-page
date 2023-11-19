@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto MK Ultra</title>
+    <link rel="stylesheet" href="src/styles/global.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html"><li>Inicio</li></a>
+      <a href="#introduccion"><li>Introducción</li></a>
+      <a href="#experimentos"><li>Experimentos</li></a>
+      <a href="#consecuencias"><li>Consecuencias</li></a>
+    </nav>
+    <section class="main-section">
+      <figure>
+        <h1>¡Bienvenido al Proyecto MK Ultra!</h1>
+        <h3>
+          Explorando el controvertido programa de control mental de la CIA.
+        </h3>
+      </figure>
+    </section>
+    <section class="info-section">
+      <section class="infoCard" id="introduccion">
+        <h2>Introducción</h2>
+        <p>
+          El Proyecto MK Ultra fue un programa secreto de la CIA que exploraba
+          técnicas de control mental, experimentación con drogas y modificación
+          del comportamiento en las décadas de 1950 y 1960. Su objetivo era
+          investigar y desarrollar métodos para el control de la mente y la
+          manipulación psicológica.
+        </p>
+        <p>
+          Durante este proyecto, se llevaron a cabo numerosos experimentos
+          controvertidos y éticamente cuestionables, incluido el uso de drogas
+          como el LSD, la hipnosis y la privación sensorial en individuos sin su
+          consentimiento informado.
+        </p>
+        <img
+          src="./public/img/mkultracia1.png"
+          alt="Proyecto MK Ultra - Introducción"
+        />
+      </section>
+      <section class="infoCard" id="experimentos">
+        <h2>Experimentos de MK Ultra</h2>
+        <p>
+          Los experimentos de MK Ultra abarcaron una amplia gama de técnicas
+          destinadas a manipular la mente humana. Algunos de los métodos
+          incluyeron la administración de drogas psicoactivas como el LSD, la
+          hipnosis, la privación sensorial y la modificación del comportamiento.
+        </p>
+        <p>
+          Estos experimentos, realizados en secreto y muchas veces sin el
+          consentimiento de los sujetos, generaron controversia y preocupación
+          ética.
+        </p>
+        <img
+          src="./public/img/mkultra1.jpg"
+          alt="Proyecto MK Ultra - Experimentos"
+        />
+      </section>
+      <section class="infoCard" id="consecuencias">
+        <h2>Consecuencias y Controversias</h2>
+        <p>
+          A medida que se hizo público, el Proyecto MK Ultra generó un intenso
+          debate sobre la ética en la investigación científica. Las
+          consecuencias éticas de manipular la mente humana sin consentimiento
+          han sido motivo de preocupación y crítica.
+        </p>
+        <p>
+          Además, las revelaciones sobre MK Ultra llevaron a investigaciones y
+          audiencias gubernamentales, y el programa ha sido objeto de
+          controversia y críticas desde entonces.
+        </p>
+        <img
+          src="./public/img/MK-Ultra-Girl-md.jpg"
+          alt="Proyecto MK Ultra - Consecuencias"
+        />
+      </section>
+      <section class="infoCard">
+        <h2>Influencia en la Cultura Popular</h2>
+        <p>
+          El Proyecto MK Ultra ha dejado una marca indeleble en la cultura
+          popular a lo largo de los años. Su representación en películas,
+          series, libros y música ha despertado la imaginación del público y ha
+          generado teorías de conspiración que vinculan sus experimentos con
+          eventos contemporáneos.
+        </p>
+        <p>
+          Explora cómo las referencias al Proyecto MK Ultra han permeado
+          diversas formas de entretenimiento y cómo estas representaciones han
+          moldeado la percepción pública sobre el control mental y la
+          manipulación psicológica.
+        </p>
+        <img src="./public/img/sombreroaluminio.jpg" alt="Cultura POP">
+      </section>
+      <section class="infoCard">
+        <h2>Revelaciones y Documentación Desclasificada</h2>
+        <p>
+          Después del cierre del Proyecto MK Ultra, la desclasificación de
+          documentos ha revelado información adicional sobre sus experimentos y
+          el alcance de sus actividades.
+        </p>
+        <p>
+          Explora cómo la documentación desclasificada ha arrojado luz sobre
+          aspectos antes desconocidos del proyecto, sus métodos de
+          experimentación y las implicaciones éticas más profundas que rodearon
+          sus actividades.
+        </p>
+        <img src="./public/img/clasificado.jpg" alt="Clasificado">
+      </section>
+      <form id="contactForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+      
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <section class="footer">
+      <div>
+        <p>Universidad Rafael Belloso Chacín</p>
+        <p>José Naranjo C.I. 30182280</p>
+      </div>
+      <div class="redes">
+        <a href="https://wwww.facebook.com">
+          <img src="./public/img/facebookicon.webp" alt="Facebook">
+        </a>
+        <a href="https://www.youtube.com">
+          <img src="./public/img/youtubeicon.png" alt="Youtube">
+        </a>
+        <a href="https://www.x.com">
+          <img src="./public/img/xicon.webp" alt="X">
+        </a>
+      </div>
+    </section>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita que el formulario se envíe por defecto
+    
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+    
+        if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+          alert("Por favor, completa todos los campos.");
+          return;
+        }
+    
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert("Por favor, introduce un correo electrónico válido.");
+          return;
+        }
+    
+        // Si pasa las validaciones, puedes procesar los datos aquí
+        // Por ejemplo, mostrar un mensaje de éxito o enviar los datos a tu servidor
+        alert("Formulario enviado correctamente");
+        // Aquí podrías agregar la lógica para enviar los datos a tu servidor mediante fetch o XMLHttpRequest
+      });
+    </script>
+  </body>
+</html>
